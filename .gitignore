@@ -9,3 +9,7 @@ dataset/origin
 dataset/out
 
 dataset/Splited_img
+
+__pycache__
+
+test_results/

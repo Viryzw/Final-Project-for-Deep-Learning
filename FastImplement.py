@@ -93,7 +93,7 @@ import torch
 import torch.optim as optim
 
 def train():
-    root = r"D:\事务夹\作业集\深度学习\final_project\dataset\Filtered_img"    # 你的数据目录
+    root = r"D:\桌面文件\总\课程\大三上\深度学习\final_project\final_project\dataset\Filtered_img"    # 你的数据目录
     batch_size = 32
 
     # 自动获取类别数
