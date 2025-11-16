@@ -13,3 +13,5 @@ dataset/Splited_img
 __pycache__
 
 test_results/
+
+data/
