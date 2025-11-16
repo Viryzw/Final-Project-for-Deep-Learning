@@ -18,13 +18,12 @@ def train(model, device, train_loader, optimizer, epoch, lamda):
         data, target = data.to(device), target.to(device)   
         
         optimizer.zero_grad()
-        z, z_hat, y_hat, masked_x, weights = model(data)
+        z, z_hat, y_hat, masked_x, weights = model(data, status=True)
         
         CE_loss = nn.CrossEntropyLoss()(y_hat, target)
         # cosine_loss = 1 - F.cosine_similarity(z, z_hat).mean()
         # cosine_loss = 1 - F.cosine_similarity(z, z_hat, dim=1).mean()
         cosine_loss = torch.clamp(1 - F.cosine_similarity(z, z_hat, dim=1).mean(), 0, 1)
-
 
         selector_reg = 1e-3 * weights.pow(2).mean()
 
@@ -56,7 +55,7 @@ def validate(model, device, val_loader, epoch):
     with torch.no_grad():
         for data, target in val_loader:
             data, target = data.to(device), target.to(device)
-            z, z_hat, y_hat, masked_x, weights = model(data)
+            z, z_hat, y_hat, masked_x, weights = model(data, status=True)
  
             # pred = y_hat.argmax(dim=1, keepdim=True)
             # correct += pred.eq(target.view_as(pred)).sum().item()

@@ -16,11 +16,11 @@ class FullModel(nn.Module):
         self.selector = Selector(k=k)
         self.classifier = Classifier(num_classes=3)
         
-    def forward(self, x):
-        z = self.encoder(x)
-        weights = self.selector(x)
+    def forward(self, x, status):
+        feat, z = self.encoder(x)
+        weights = self.selector(feat, status)
         masked_x = torch.mul(x, weights)
-        z_hat = self.encoder(masked_x)
+        _, z_hat = self.encoder(masked_x)
         y_hat = self.classifier(z_hat)
        
         return z, z_hat, y_hat, masked_x, weights
@@ -88,7 +88,7 @@ class Encoder(nn.Module):
         pooled = self.pool(feat).view(feat.size(0), -1)  # [B,256]
         emb = self.fc(pooled)  # [B,embedding_dim]
         emb = F.normalize(emb, p=2, dim=1)  # L2 normalize
-        return emb
+        return feat, emb
         
 
 # CNN + 注意力
@@ -167,33 +167,33 @@ class Selector(nn.Module):
         
         self.k = k
 
-        self.c1 = nn.Sequential(
-            nn.Conv2d(1, 32, kernel_size=3, padding=1),
-            nn.BatchNorm2d(32),
-            nn.ReLU(),
-            nn.MaxPool2d(2)
-        )
+        # self.c1 = nn.Sequential(
+        #     nn.Conv2d(1, 32, kernel_size=3, padding=1),
+        #     nn.BatchNorm2d(32),
+        #     nn.ReLU(),
+        #     nn.MaxPool2d(2)
+        # )
 
-        self.c2 = nn.Sequential(
-            nn.Conv2d(32, 64, kernel_size=3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(),
-            nn.MaxPool2d(2)
-        )
+        # self.c2 = nn.Sequential(
+        #     nn.Conv2d(32, 64, kernel_size=3, padding=1),
+        #     nn.BatchNorm2d(64),
+        #     nn.ReLU(),
+        #     nn.MaxPool2d(2)
+        # )
 
-        self.c3 = nn.Sequential(
-            nn.Conv2d(64, 128, kernel_size=3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(),
-            nn.MaxPool2d(2)
-        )
+        # self.c3 = nn.Sequential(
+        #     nn.Conv2d(64, 128, kernel_size=3, padding=1),
+        #     nn.BatchNorm2d(128),
+        #     nn.ReLU(),
+        #     nn.MaxPool2d(2)
+        # )
 
-        self.c4 = nn.Sequential(
-            nn.Conv2d(128, 256, kernel_size=3, padding=1),
-            nn.BatchNorm2d(256),
-            nn.ReLU(),
-            nn.MaxPool2d(2)
-        )
+        # self.c4 = nn.Sequential(
+        #     nn.Conv2d(128, 256, kernel_size=3, padding=1),
+        #     nn.BatchNorm2d(256),
+        #     nn.ReLU(),
+        #     nn.MaxPool2d(2)
+        # )
 
         self.c5 = nn.Sequential(
             nn.Conv2d(256, 512, kernel_size=3, padding=1),
@@ -206,20 +206,20 @@ class Selector(nn.Module):
         self.out_conv = nn.Conv2d(512, 1, kernel_size=1)
 
         # Normalize logits to stabilize Selector
-        self.norm = nn.LayerNorm([4, 4])   # 你最后 feature map 是 4x4
+        # self.norm = nn.LayerNorm([4, 4])   # 你最后 feature map 是 4x4
 
         # upsample recovery
         self.upsample = nn.Upsample(scale_factor=32, mode='bilinear', align_corners=False)
 
-    def forward(self, x, tau=0.1):
-        bs = x.size(0)
+    def forward(self, feat, status, tau=0.1):
+        bs = feat.size(0)
 
         # 下采样
-        o1 = self.c1(x)
-        o2 = self.c2(o1)
-        o3 = self.c3(o2)
-        o4 = self.c4(o3)
-        o5 = self.c5(o4)
+        # o1 = self.c1(x)
+        # o2 = self.c2(o1)
+        # o3 = self.c3(o2)
+        # o4 = self.c4(o3)
+        o5 = self.c5(feat)
 
         # logits shape = (B,1,4,4)
         logits = self.out_conv(o5)
@@ -231,7 +231,7 @@ class Selector(nn.Module):
         logits_norm = F.softmax(logits_flat / tau, dim=-1)
 
         # 采样 k 个位置
-        selected_subset = sample_concrete(tau, logits_norm, self.k)
+        selected_subset = sample_concrete(tau, logits_norm, status, self.k)
 
         # reshape 回 spatial map
         M = logits.size(-1)
