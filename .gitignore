@@ -2,18 +2,22 @@ test_imgs/
 
 result/
 
-dataset/Filtered_img
+data/train
 
-dataset/origin
+data/valid
 
-dataset/out
+data/test
 
 dataset/Splited_img
 
-__pycache__
+**/__pycache__/
 
 test_results/
 
-data/
-
 visualization/
+
+checkpoints_k10/
+
+checkpoints_k20/
+
+checkpoints_k30/

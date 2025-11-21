@@ -2,11 +2,29 @@ import torch
 import torch.nn as nn
 import shutil
 import os
-from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
 from pathlib import Path
-import cv2
+
+def denormalize(tensor, mean=0.5, std=0.5):
+    """
+    tensor: [C,H,W] 或 [B,C,H,W]
+    mean/std: 单通道灰度图
+    """
+    # 兼容 batch
+    if tensor.dim() == 4:  # [B,C,H,W]
+        c = tensor.size(1)
+        mean_t = torch.tensor([mean], device=tensor.device, dtype=tensor.dtype).view(1, c, 1, 1)
+        std_t  = torch.tensor([std], device=tensor.device, dtype=tensor.dtype).view(1, c, 1, 1)
+    elif tensor.dim() == 3:  # [C,H,W]
+        c = tensor.size(0)
+        mean_t = torch.tensor([mean], device=tensor.device, dtype=tensor.dtype).view(c, 1, 1)
+        std_t  = torch.tensor([std], device=tensor.device, dtype=tensor.dtype).view(c, 1, 1)
+    else:
+        raise ValueError("tensor must be [C,H,W] or [B,C,H,W]")
+    
+    return tensor * std_t + mean_t
 
 def sample_concrete(tau, logits, status, k=10):
     if (status == True):
@@ -71,9 +89,7 @@ def save_mask_gray(v, save_dir="./mask_gray", mean=None, std=None):
             # === 保存 ===
             save_path = os.path.join(save_dir, f"mask_gray_{i}.png")
             img.save(save_path)
-            # print(f"[Saved] {save_path}")
-            
-            
+            # print(f"[Saved] {save_path}")  
             
 class ExplainVisual(object):
     def __init__(self, image_dir, data, epoch, batch, masked_x, mask, label, label_approx,batch_idx):#, prob
@@ -108,24 +124,7 @@ class ExplainVisual(object):
             mean = torch.tensor([0.5], dtype=torch.float32)  # [1]
             std  = torch.tensor([0.5], dtype=torch.float32)  # [1]
 
-            def denormalize(tensor, mean=0.5, std=0.5):
-                """
-                tensor: [C,H,W] 或 [B,C,H,W]
-                mean/std: 单通道灰度图
-                """
-                # 兼容 batch
-                if tensor.dim() == 4:  # [B,C,H,W]
-                    c = tensor.size(1)
-                    mean_t = torch.tensor([mean], device=tensor.device, dtype=tensor.dtype).view(1, c, 1, 1)
-                    std_t  = torch.tensor([std], device=tensor.device, dtype=tensor.dtype).view(1, c, 1, 1)
-                elif tensor.dim() == 3:  # [C,H,W]
-                    c = tensor.size(0)
-                    mean_t = torch.tensor([mean], device=tensor.device, dtype=tensor.dtype).view(c, 1, 1)
-                    std_t  = torch.tensor([std], device=tensor.device, dtype=tensor.dtype).view(c, 1, 1)
-                else:
-                    raise ValueError("tensor must be [C,H,W] or [B,C,H,W]")
-                
-                return tensor * std_t + mean_t
+
 
             
         # === 4. 创建画布 ===

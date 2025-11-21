@@ -1,0 +1,277 @@
+training 25 epochs with lr 0.0003,lamda 0.1,selected_k 20
+Training Epochs:   0%|                                                                           | 0/25 [00:00<?, ?it/s]Train Epoch: 1 [0/116172] Loss: 2.404497 CE_loss: 2.316820 cosine_loss: 0.870806 Acc: 0.00%
+Train Epoch: 1 [16000/116172] Loss: 1.765169 CE_loss: 1.737634 cosine_loss: 0.269343 Acc: 4.94%
+Train Epoch: 1 [32000/116172] Loss: 1.495173 CE_loss: 1.477154 cosine_loss: 0.174563 Acc: 11.90%
+Train Epoch: 1 [48000/116172] Loss: 1.370422 CE_loss: 1.356310 cosine_loss: 0.135015 Acc: 19.34%
+Train Epoch: 1 [64000/116172] Loss: 1.324413 CE_loss: 1.313600 cosine_loss: 0.102435 Acc: 27.18%
+Train Epoch: 1 [80000/116172] Loss: 1.164726 CE_loss: 1.154573 cosine_loss: 0.095641 Acc: 35.14%
+Train Epoch: 1 [96000/116172] Loss: 0.977613 CE_loss: 0.969857 cosine_loss: 0.071605 Acc: 43.26%
+Train Epoch: 1 [112000/116172] Loss: 1.572419 CE_loss: 1.565129 cosine_loss: 0.067160 Acc: 51.61%
+epoch accuracy:53.812450504424476%
+Validation set - Epoch: 1, Accuracy: 4860/7262 (66.92%)
+Model saved at epoch_1
+Training Epochs:   4%|██▌                                                             | 1/25 [05:56<2:22:41, 356.72s/it]Train Epoch: 2 [0/116172] Loss: 1.372438 CE_loss: 1.364936 cosine_loss: 0.069185 Acc: 0.02%
+Train Epoch: 2 [16000/116172] Loss: 0.807299 CE_loss: 0.800178 cosine_loss: 0.065145 Acc: 8.73%
+Train Epoch: 2 [32000/116172] Loss: 1.176735 CE_loss: 1.170387 cosine_loss: 0.057566 Acc: 17.55%
+Train Epoch: 2 [48000/116172] Loss: 0.744617 CE_loss: 0.738064 cosine_loss: 0.059480 Acc: 26.55%
+Train Epoch: 2 [64000/116172] Loss: 0.944081 CE_loss: 0.938175 cosine_loss: 0.053444 Acc: 35.72%
+Train Epoch: 2 [80000/116172] Loss: 1.035490 CE_loss: 1.029981 cosine_loss: 0.049268 Acc: 44.94%
+Train Epoch: 2 [96000/116172] Loss: 0.849848 CE_loss: 0.844569 cosine_loss: 0.046977 Acc: 54.32%
+Train Epoch: 2 [112000/116172] Loss: 0.704427 CE_loss: 0.699448 cosine_loss: 0.043983 Acc: 63.78%
+epoch accuracy:66.21733292015287%
+Validation set - Epoch: 2, Accuracy: 4610/7262 (63.48%)
+Epoch 2 completed
+Training Epochs:   8%|█████                                                           | 2/25 [11:47<2:15:25, 353.30s/it]Train Epoch: 3 [0/116172] Loss: 0.998793 CE_loss: 0.993326 cosine_loss: 0.048935 Acc: 0.01%
+Train Epoch: 3 [16000/116172] Loss: 0.904238 CE_loss: 0.899082 cosine_loss: 0.045764 Acc: 9.73%
+Train Epoch: 3 [32000/116172] Loss: 0.674724 CE_loss: 0.669580 cosine_loss: 0.045665 Acc: 19.46%
+Train Epoch: 3 [48000/116172] Loss: 1.094835 CE_loss: 1.089902 cosine_loss: 0.043487 Acc: 29.24%
+Train Epoch: 3 [64000/116172] Loss: 0.766473 CE_loss: 0.761831 cosine_loss: 0.040670 Acc: 39.12%
+Train Epoch: 3 [80000/116172] Loss: 0.636506 CE_loss: 0.631880 cosine_loss: 0.040746 Acc: 48.93%
+Train Epoch: 3 [96000/116172] Loss: 1.114681 CE_loss: 1.109578 cosine_loss: 0.045301 Acc: 58.86%
+Train Epoch: 3 [112000/116172] Loss: 0.883476 CE_loss: 0.879050 cosine_loss: 0.038748 Acc: 68.79%
+epoch accuracy:71.37261990841166%
+Validation set - Epoch: 3, Accuracy: 5599/7262 (77.10%)
+Model saved at epoch_3
+Training Epochs:  12%|███████▋                                                        | 3/25 [17:34<2:08:25, 350.25s/it]Train Epoch: 4 [0/116172] Loss: 0.940563 CE_loss: 0.936081 cosine_loss: 0.039031 Acc: 0.02%
+Train Epoch: 4 [16000/116172] Loss: 0.768743 CE_loss: 0.764911 cosine_loss: 0.032514 Acc: 10.23%
+Train Epoch: 4 [32000/116172] Loss: 1.121652 CE_loss: 1.116465 cosine_loss: 0.045953 Acc: 20.36%
+Train Epoch: 4 [48000/116172] Loss: 0.828959 CE_loss: 0.824663 cosine_loss: 0.037179 Acc: 30.64%
+Train Epoch: 4 [64000/116172] Loss: 1.067639 CE_loss: 1.063418 cosine_loss: 0.036349 Acc: 40.88%
+Train Epoch: 4 [80000/116172] Loss: 0.428380 CE_loss: 0.424709 cosine_loss: 0.030778 Acc: 51.16%
+Train Epoch: 4 [96000/116172] Loss: 0.921945 CE_loss: 0.917542 cosine_loss: 0.038467 Acc: 61.50%
+Train Epoch: 4 [112000/116172] Loss: 0.605732 CE_loss: 0.601377 cosine_loss: 0.037874 Acc: 71.90%
+epoch accuracy:74.57735082463932%
+Validation set - Epoch: 4, Accuracy: 5887/7262 (81.07%)
+Model saved at epoch_4
+Training Epochs:  16%|██████████▏                                                     | 4/25 [23:19<2:01:56, 348.40s/it]Train Epoch: 5 [0/116172] Loss: 0.794846 CE_loss: 0.790572 cosine_loss: 0.036991 Acc: 0.02%
+Train Epoch: 5 [16000/116172] Loss: 0.438022 CE_loss: 0.434091 cosine_loss: 0.033421 Acc: 10.53%
+Train Epoch: 5 [32000/116172] Loss: 0.633693 CE_loss: 0.629310 cosine_loss: 0.037939 Acc: 21.19%
+Train Epoch: 5 [48000/116172] Loss: 0.656011 CE_loss: 0.651787 cosine_loss: 0.036437 Acc: 31.78%
+Train Epoch: 5 [64000/116172] Loss: 0.522705 CE_loss: 0.518739 cosine_loss: 0.033877 Acc: 42.52%
+Train Epoch: 5 [80000/116172] Loss: 0.818159 CE_loss: 0.814328 cosine_loss: 0.032610 Acc: 53.22%
+Train Epoch: 5 [96000/116172] Loss: 0.633603 CE_loss: 0.629778 cosine_loss: 0.032256 Acc: 63.96%
+Train Epoch: 5 [112000/116172] Loss: 0.620939 CE_loss: 0.616802 cosine_loss: 0.035483 Acc: 74.70%
+epoch accuracy:77.50662810315738%
+Validation set - Epoch: 5, Accuracy: 5394/7262 (74.28%)
+Epoch 5 completed
+Training Epochs:  20%|████████████▊                                                   | 5/25 [29:00<1:55:15, 345.75s/it]Train Epoch: 6 [0/116172] Loss: 0.757839 CE_loss: 0.753808 cosine_loss: 0.034422 Acc: 0.02%
+Train Epoch: 6 [16000/116172] Loss: 0.445593 CE_loss: 0.441826 cosine_loss: 0.031917 Acc: 10.96%
+Train Epoch: 6 [32000/116172] Loss: 0.731639 CE_loss: 0.727364 cosine_loss: 0.037074 Acc: 21.90%
+Train Epoch: 6 [48000/116172] Loss: 0.660511 CE_loss: 0.656815 cosine_loss: 0.031100 Acc: 32.98%
+Train Epoch: 6 [64000/116172] Loss: 0.560700 CE_loss: 0.557143 cosine_loss: 0.029917 Acc: 44.06%
+Train Epoch: 6 [80000/116172] Loss: 0.562322 CE_loss: 0.558541 cosine_loss: 0.031901 Acc: 55.24%
+Train Epoch: 6 [96000/116172] Loss: 0.662764 CE_loss: 0.659329 cosine_loss: 0.028510 Acc: 66.24%
+Train Epoch: 6 [112000/116172] Loss: 0.600842 CE_loss: 0.597035 cosine_loss: 0.032218 Acc: 77.26%
+epoch accuracy:80.12774162448783%
+Validation set - Epoch: 6, Accuracy: 6054/7262 (83.37%)
+Model saved at epoch_6
+Training Epochs:  24%|███████████████▎                                                | 6/25 [34:43<1:49:09, 344.69s/it]Train Epoch: 7 [0/116172] Loss: 0.623270 CE_loss: 0.619447 cosine_loss: 0.032422 Acc: 0.02%
+Train Epoch: 7 [16000/116172] Loss: 0.627998 CE_loss: 0.624191 cosine_loss: 0.032426 Acc: 11.31%
+Train Epoch: 7 [32000/116172] Loss: 0.405551 CE_loss: 0.401577 cosine_loss: 0.033821 Acc: 22.53%
+Train Epoch: 7 [48000/116172] Loss: 0.499152 CE_loss: 0.495666 cosine_loss: 0.029123 Acc: 33.86%
+Train Epoch: 7 [64000/116172] Loss: 0.240379 CE_loss: 0.236832 cosine_loss: 0.029534 Acc: 45.21%
+Train Epoch: 7 [80000/116172] Loss: 0.473988 CE_loss: 0.469879 cosine_loss: 0.034943 Acc: 56.51%
+Train Epoch: 7 [96000/116172] Loss: 0.531012 CE_loss: 0.527175 cosine_loss: 0.032562 Acc: 68.00%
+Train Epoch: 7 [112000/116172] Loss: 0.380971 CE_loss: 0.377434 cosine_loss: 0.029554 Acc: 79.36%
+epoch accuracy:82.29521743621527%
+Validation set - Epoch: 7, Accuracy: 5796/7262 (79.81%)
+Epoch 7 completed
+Training Epochs:  28%|█████████████████▉                                              | 7/25 [40:30<1:43:40, 345.59s/it]Train Epoch: 8 [0/116172] Loss: 0.439453 CE_loss: 0.435686 cosine_loss: 0.031665 Acc: 0.02%
+Train Epoch: 8 [16000/116172] Loss: 0.337580 CE_loss: 0.333704 cosine_loss: 0.032838 Acc: 11.64%
+Train Epoch: 8 [32000/116172] Loss: 0.472121 CE_loss: 0.468101 cosine_loss: 0.034503 Acc: 23.28%
+Train Epoch: 8 [48000/116172] Loss: 0.422392 CE_loss: 0.418582 cosine_loss: 0.032438 Acc: 34.86%
+Train Epoch: 8 [64000/116172] Loss: 0.436726 CE_loss: 0.433331 cosine_loss: 0.027817 Acc: 46.54%
+Train Epoch: 8 [80000/116172] Loss: 0.461287 CE_loss: 0.457820 cosine_loss: 0.028807 Acc: 58.18%
+Train Epoch: 8 [96000/116172] Loss: 0.373782 CE_loss: 0.370456 cosine_loss: 0.027643 Acc: 69.82%
+Train Epoch: 8 [112000/116172] Loss: 0.456857 CE_loss: 0.452858 cosine_loss: 0.033918 Acc: 81.46%
+epoch accuracy:84.49454257480288%
+Validation set - Epoch: 8, Accuracy: 6170/7262 (84.96%)
+Model saved at epoch_8
+Training Epochs:  32%|████████████████████▍                                           | 8/25 [46:21<1:38:21, 347.14s/it]Train Epoch: 9 [0/116172] Loss: 0.513764 CE_loss: 0.510609 cosine_loss: 0.025732 Acc: 0.02%
+Train Epoch: 9 [16000/116172] Loss: 0.336130 CE_loss: 0.332434 cosine_loss: 0.031180 Acc: 12.01%
+Train Epoch: 9 [32000/116172] Loss: 0.441505 CE_loss: 0.437827 cosine_loss: 0.030744 Acc: 23.89%
+Train Epoch: 9 [48000/116172] Loss: 0.376602 CE_loss: 0.373123 cosine_loss: 0.029049 Acc: 35.82%
+Train Epoch: 9 [64000/116172] Loss: 0.298758 CE_loss: 0.295218 cosine_loss: 0.029598 Acc: 47.72%
+Train Epoch: 9 [80000/116172] Loss: 0.291195 CE_loss: 0.287807 cosine_loss: 0.028173 Acc: 59.55%
+Train Epoch: 9 [96000/116172] Loss: 0.340685 CE_loss: 0.337513 cosine_loss: 0.025825 Acc: 71.41%
+Train Epoch: 9 [112000/116172] Loss: 0.271834 CE_loss: 0.268081 cosine_loss: 0.031865 Acc: 83.34%
+epoch accuracy:86.42443962400579%
+Validation set - Epoch: 9, Accuracy: 6277/7262 (86.44%)
+Model saved at epoch_9
+Training Epochs:  36%|███████████████████████                                         | 9/25 [52:08<1:32:35, 347.25s/it]Train Epoch: 10 [0/116172] Loss: 0.296154 CE_loss: 0.292785 cosine_loss: 0.027801 Acc: 0.03%
+Train Epoch: 10 [16000/116172] Loss: 0.545730 CE_loss: 0.542756 cosine_loss: 0.023697 Acc: 12.19%
+Train Epoch: 10 [32000/116172] Loss: 0.394471 CE_loss: 0.390844 cosine_loss: 0.030610 Acc: 24.29%
+Train Epoch: 10 [48000/116172] Loss: 0.294745 CE_loss: 0.291652 cosine_loss: 0.024940 Acc: 36.41%
+Train Epoch: 10 [64000/116172] Loss: 0.584491 CE_loss: 0.581200 cosine_loss: 0.027298 Acc: 48.51%
+Train Epoch: 10 [80000/116172] Loss: 0.594294 CE_loss: 0.591277 cosine_loss: 0.024245 Acc: 60.68%
+Train Epoch: 10 [96000/116172] Loss: 0.301267 CE_loss: 0.297836 cosine_loss: 0.028513 Acc: 72.83%
+Train Epoch: 10 [112000/116172] Loss: 0.213880 CE_loss: 0.210422 cosine_loss: 0.028713 Acc: 84.98%
+epoch accuracy:88.11073236235926%
+Validation set - Epoch: 10, Accuracy: 6356/7262 (87.52%)
+Model saved at epoch_10
+Training Epochs:  40%|█████████████████████████▏                                     | 10/25 [58:00<1:27:09, 348.61s/it]Train Epoch: 11 [0/116172] Loss: 0.494396 CE_loss: 0.490957 cosine_loss: 0.028430 Acc: 0.02%
+Train Epoch: 11 [16000/116172] Loss: 0.217568 CE_loss: 0.214108 cosine_loss: 0.028661 Acc: 12.41%
+Train Epoch: 11 [32000/116172] Loss: 0.162835 CE_loss: 0.159620 cosine_loss: 0.026382 Acc: 24.68%
+Train Epoch: 11 [48000/116172] Loss: 0.380859 CE_loss: 0.377877 cosine_loss: 0.023817 Acc: 37.02%
+Train Epoch: 11 [64000/116172] Loss: 0.178804 CE_loss: 0.175896 cosine_loss: 0.023095 Acc: 49.35%
+Train Epoch: 11 [80000/116172] Loss: 0.097279 CE_loss: 0.094160 cosine_loss: 0.025553 Acc: 61.71%
+Train Epoch: 11 [96000/116172] Loss: 0.309790 CE_loss: 0.306337 cosine_loss: 0.028531 Acc: 74.07%
+Train Epoch: 11 [112000/116172] Loss: 0.194719 CE_loss: 0.191629 cosine_loss: 0.025058 Acc: 86.40%
+epoch accuracy:89.58527011672348%
+Validation set - Epoch: 11, Accuracy: 6088/7262 (83.83%)
+Epoch 11 completed
+Training Epochs:  44%|██████████████████████████▊                                  | 11/25 [1:03:57<1:21:55, 351.09s/it]Train Epoch: 12 [0/116172] Loss: 0.623043 CE_loss: 0.619459 cosine_loss: 0.029903 Acc: 0.02%
+Train Epoch: 12 [16000/116172] Loss: 0.233221 CE_loss: 0.230461 cosine_loss: 0.021612 Acc: 12.56%
+Train Epoch: 12 [32000/116172] Loss: 0.159178 CE_loss: 0.156136 cosine_loss: 0.024713 Acc: 25.14%
+Train Epoch: 12 [48000/116172] Loss: 0.167172 CE_loss: 0.164071 cosine_loss: 0.024959 Acc: 37.64%
+Train Epoch: 12 [64000/116172] Loss: 0.145239 CE_loss: 0.142145 cosine_loss: 0.025163 Acc: 50.19%
+Train Epoch: 12 [80000/116172] Loss: 0.358730 CE_loss: 0.355296 cosine_loss: 0.028414 Acc: 62.75%
+Train Epoch: 12 [96000/116172] Loss: 0.588869 CE_loss: 0.585506 cosine_loss: 0.027869 Acc: 75.32%
+Train Epoch: 12 [112000/116172] Loss: 0.335495 CE_loss: 0.332292 cosine_loss: 0.026372 Acc: 87.82%
+epoch accuracy:91.0598078710877%
+Validation set - Epoch: 12, Accuracy: 6466/7262 (89.04%)
+Model saved at epoch_12
+Training Epochs:  48%|█████████████████████████████▎                               | 12/25 [1:09:54<1:16:29, 353.06s/it]Train Epoch: 13 [0/116172] Loss: 0.339626 CE_loss: 0.336539 cosine_loss: 0.025277 Acc: 0.02%
+Train Epoch: 13 [16000/116172] Loss: 0.283971 CE_loss: 0.281184 cosine_loss: 0.021714 Acc: 12.78%
+Train Epoch: 13 [32000/116172] Loss: 0.181393 CE_loss: 0.178576 cosine_loss: 0.022356 Acc: 25.51%
+Train Epoch: 13 [48000/116172] Loss: 0.256404 CE_loss: 0.253675 cosine_loss: 0.021487 Acc: 38.25%
+Train Epoch: 13 [64000/116172] Loss: 0.144316 CE_loss: 0.141195 cosine_loss: 0.025257 Acc: 50.93%
+Train Epoch: 13 [80000/116172] Loss: 0.129380 CE_loss: 0.125848 cosine_loss: 0.029691 Acc: 63.56%
+Train Epoch: 13 [96000/116172] Loss: 0.217866 CE_loss: 0.214864 cosine_loss: 0.023977 Acc: 76.22%
+Train Epoch: 13 [112000/116172] Loss: 0.249164 CE_loss: 0.245974 cosine_loss: 0.025756 Acc: 88.88%
+epoch accuracy:92.16162242192611%
+Validation set - Epoch: 13, Accuracy: 6402/7262 (88.16%)
+Epoch 13 completed
+Training Epochs:  52%|███████████████████████████████▋                             | 13/25 [1:15:56<1:11:09, 355.75s/it]Train Epoch: 14 [0/116172] Loss: 0.226976 CE_loss: 0.223742 cosine_loss: 0.026581 Acc: 0.02%
+Train Epoch: 14 [16000/116172] Loss: 0.066083 CE_loss: 0.062848 cosine_loss: 0.026666 Acc: 12.90%
+Train Epoch: 14 [32000/116172] Loss: 0.350395 CE_loss: 0.347230 cosine_loss: 0.025727 Acc: 25.75%
+Train Epoch: 14 [48000/116172] Loss: 0.253756 CE_loss: 0.250590 cosine_loss: 0.025783 Acc: 38.61%
+Train Epoch: 14 [64000/116172] Loss: 0.100107 CE_loss: 0.097430 cosine_loss: 0.020913 Acc: 51.47%
+Train Epoch: 14 [80000/116172] Loss: 0.193136 CE_loss: 0.189929 cosine_loss: 0.026251 Acc: 64.37%
+Train Epoch: 14 [96000/116172] Loss: 0.222718 CE_loss: 0.219792 cosine_loss: 0.023523 Acc: 77.18%
+Train Epoch: 14 [112000/116172] Loss: 0.076465 CE_loss: 0.073641 cosine_loss: 0.022538 Acc: 90.02%
+epoch accuracy:93.34262989360603%
+Validation set - Epoch: 14, Accuracy: 6554/7262 (90.25%)
+Model saved at epoch_14
+Training Epochs:  56%|██████████████████████████████████▏                          | 14/25 [1:21:56<1:05:27, 357.01s/it]Train Epoch: 15 [0/116172] Loss: 0.137199 CE_loss: 0.134447 cosine_loss: 0.021646 Acc: 0.03%
+Train Epoch: 15 [16000/116172] Loss: 0.042536 CE_loss: 0.039535 cosine_loss: 0.024324 Acc: 12.99%
+Train Epoch: 15 [32000/116172] Loss: 0.057515 CE_loss: 0.054903 cosine_loss: 0.020282 Acc: 26.02%
+Train Epoch: 15 [48000/116172] Loss: 0.127894 CE_loss: 0.124994 cosine_loss: 0.022932 Acc: 38.92%
+Train Epoch: 15 [64000/116172] Loss: 0.240805 CE_loss: 0.237893 cosine_loss: 0.023222 Acc: 51.90%
+Train Epoch: 15 [80000/116172] Loss: 0.092664 CE_loss: 0.089738 cosine_loss: 0.023504 Acc: 64.90%
+Train Epoch: 15 [96000/116172] Loss: 0.021324 CE_loss: 0.018663 cosine_loss: 0.020641 Acc: 77.88%
+Train Epoch: 15 [112000/116172] Loss: 0.227252 CE_loss: 0.224231 cosine_loss: 0.024615 Acc: 90.85%
+epoch accuracy:94.21289123024481%
+Validation set - Epoch: 15, Accuracy: 6718/7262 (92.51%)
+Model saved at epoch_15
+Training Epochs:  60%|█████████████████████████████████████▊                         | 15/25 [1:27:53<59:28, 356.88s/it]Train Epoch: 16 [0/116172] Loss: 0.117044 CE_loss: 0.113887 cosine_loss: 0.025690 Acc: 0.03%
+Train Epoch: 16 [16000/116172] Loss: 0.018702 CE_loss: 0.016110 cosine_loss: 0.019892 Acc: 13.10%
+Train Epoch: 16 [32000/116172] Loss: 0.124381 CE_loss: 0.121648 cosine_loss: 0.021700 Acc: 26.17%
+Train Epoch: 16 [48000/116172] Loss: 0.231327 CE_loss: 0.228160 cosine_loss: 0.025645 Acc: 39.23%
+Train Epoch: 16 [64000/116172] Loss: 0.114467 CE_loss: 0.111314 cosine_loss: 0.025669 Acc: 52.30%
+Train Epoch: 16 [80000/116172] Loss: 0.244706 CE_loss: 0.241471 cosine_loss: 0.026469 Acc: 65.41%
+Train Epoch: 16 [96000/116172] Loss: 0.184568 CE_loss: 0.181938 cosine_loss: 0.020607 Acc: 78.46%
+Train Epoch: 16 [112000/116172] Loss: 0.117514 CE_loss: 0.115106 cosine_loss: 0.018218 Acc: 91.54%
+epoch accuracy:94.93251385876114%
+Validation set - Epoch: 16, Accuracy: 6663/7262 (91.75%)
+Epoch 16 completed
+Training Epochs:  64%|████████████████████████████████████████▎                      | 16/25 [1:33:46<53:21, 355.74s/it]Train Epoch: 17 [0/116172] Loss: 0.050176 CE_loss: 0.047476 cosine_loss: 0.020853 Acc: 0.03%
+Train Epoch: 17 [16000/116172] Loss: 0.114763 CE_loss: 0.112071 cosine_loss: 0.020986 Acc: 13.20%
+Train Epoch: 17 [32000/116172] Loss: 0.130572 CE_loss: 0.127620 cosine_loss: 0.023488 Acc: 26.37%
+Train Epoch: 17 [48000/116172] Loss: 0.042804 CE_loss: 0.039840 cosine_loss: 0.023796 Acc: 39.54%
+Train Epoch: 17 [64000/116172] Loss: 0.292435 CE_loss: 0.289405 cosine_loss: 0.024450 Acc: 52.73%
+Train Epoch: 17 [80000/116172] Loss: 0.034609 CE_loss: 0.031779 cosine_loss: 0.022242 Acc: 65.85%
+Train Epoch: 17 [96000/116172] Loss: 0.049350 CE_loss: 0.046956 cosine_loss: 0.018264 Acc: 79.02%
+Train Epoch: 17 [112000/116172] Loss: 0.056103 CE_loss: 0.053549 cosine_loss: 0.019518 Acc: 92.20%
+epoch accuracy:95.62373033088868%
+Validation set - Epoch: 17, Accuracy: 6720/7262 (92.54%)
+Model saved at epoch_17
+Training Epochs:  68%|██████████████████████████████████████████▊                    | 17/25 [1:39:44<47:30, 356.35s/it]Train Epoch: 18 [0/116172] Loss: 0.018339 CE_loss: 0.015465 cosine_loss: 0.022880 Acc: 0.03%
+Train Epoch: 18 [16000/116172] Loss: 0.195486 CE_loss: 0.192906 cosine_loss: 0.019926 Acc: 13.30%
+Train Epoch: 18 [32000/116172] Loss: 0.085867 CE_loss: 0.083227 cosine_loss: 0.020361 Acc: 26.53%
+Train Epoch: 18 [48000/116172] Loss: 0.028492 CE_loss: 0.025958 cosine_loss: 0.019319 Acc: 39.83%
+Train Epoch: 18 [64000/116172] Loss: 0.159605 CE_loss: 0.156763 cosine_loss: 0.022437 Acc: 53.12%
+Train Epoch: 18 [80000/116172] Loss: 0.026261 CE_loss: 0.023891 cosine_loss: 0.017601 Acc: 66.37%
+Train Epoch: 18 [96000/116172] Loss: 0.177527 CE_loss: 0.174625 cosine_loss: 0.023373 Acc: 79.66%
+Train Epoch: 18 [112000/116172] Loss: 0.035900 CE_loss: 0.033454 cosine_loss: 0.018852 Acc: 92.90%
+epoch accuracy:96.34507454464071%
+Validation set - Epoch: 18, Accuracy: 6721/7262 (92.55%)
+Model saved at epoch_18
+Training Epochs:  72%|█████████████████████████████████████████████▎                 | 18/25 [1:45:42<41:39, 357.04s/it]Train Epoch: 19 [0/116172] Loss: 0.035391 CE_loss: 0.032901 cosine_loss: 0.019039 Acc: 0.03%
+Train Epoch: 19 [16000/116172] Loss: 0.012746 CE_loss: 0.010338 cosine_loss: 0.017934 Acc: 13.38%
+Train Epoch: 19 [32000/116172] Loss: 0.193315 CE_loss: 0.190605 cosine_loss: 0.021347 Acc: 26.73%
+Train Epoch: 19 [48000/116172] Loss: 0.067847 CE_loss: 0.065354 cosine_loss: 0.018794 Acc: 40.10%
+Train Epoch: 19 [64000/116172] Loss: 0.177651 CE_loss: 0.174779 cosine_loss: 0.022793 Acc: 53.44%
+Train Epoch: 19 [80000/116172] Loss: 0.133234 CE_loss: 0.130366 cosine_loss: 0.022737 Acc: 66.78%
+Train Epoch: 19 [96000/116172] Loss: 0.032340 CE_loss: 0.029815 cosine_loss: 0.019459 Acc: 80.13%
+Train Epoch: 19 [112000/116172] Loss: 0.152151 CE_loss: 0.149389 cosine_loss: 0.021704 Acc: 93.46%
+epoch accuracy:96.89598182005992%
+Validation set - Epoch: 19, Accuracy: 6723/7262 (92.58%)
+Model saved at epoch_19
+Training Epochs:  76%|███████████████████████████████████████████████▉               | 19/25 [1:51:38<35:40, 356.76s/it]Train Epoch: 20 [0/116172] Loss: 0.128860 CE_loss: 0.126371 cosine_loss: 0.019114 Acc: 0.03%
+Train Epoch: 20 [16000/116172] Loss: 0.025315 CE_loss: 0.022792 cosine_loss: 0.019164 Acc: 13.42%
+Train Epoch: 20 [32000/116172] Loss: 0.037700 CE_loss: 0.035241 cosine_loss: 0.018620 Acc: 26.81%
+Train Epoch: 20 [48000/116172] Loss: 0.070217 CE_loss: 0.067681 cosine_loss: 0.019417 Acc: 40.20%
+Train Epoch: 20 [64000/116172] Loss: 0.017565 CE_loss: 0.015002 cosine_loss: 0.019845 Acc: 53.56%
+Train Epoch: 20 [80000/116172] Loss: 0.083014 CE_loss: 0.080489 cosine_loss: 0.019407 Acc: 66.91%
+Train Epoch: 20 [96000/116172] Loss: 0.191917 CE_loss: 0.189031 cosine_loss: 0.022835 Acc: 80.30%
+Train Epoch: 20 [112000/116172] Loss: 0.110998 CE_loss: 0.108563 cosine_loss: 0.018559 Acc: 93.69%
+epoch accuracy:97.1611059463554%
+Validation set - Epoch: 20, Accuracy: 6818/7262 (93.89%)
+Model saved at epoch_20
+Training Epochs:  80%|██████████████████████████████████████████████████▍            | 20/25 [1:57:37<29:46, 357.31s/it]Train Epoch: 21 [0/116172] Loss: 0.123488 CE_loss: 0.121067 cosine_loss: 0.018331 Acc: 0.03%
+Train Epoch: 21 [16000/116172] Loss: 0.115015 CE_loss: 0.112167 cosine_loss: 0.022653 Acc: 13.47%
+Train Epoch: 21 [32000/116172] Loss: 0.018003 CE_loss: 0.015568 cosine_loss: 0.018723 Acc: 26.90%
+Train Epoch: 21 [48000/116172] Loss: 0.031113 CE_loss: 0.028510 cosine_loss: 0.020019 Acc: 40.35%
+Train Epoch: 21 [64000/116172] Loss: 0.058474 CE_loss: 0.055881 cosine_loss: 0.020018 Acc: 53.82%
+Train Epoch: 21 [80000/116172] Loss: 0.073337 CE_loss: 0.070499 cosine_loss: 0.022288 Acc: 67.26%
+Train Epoch: 21 [96000/116172] Loss: 0.080985 CE_loss: 0.078236 cosine_loss: 0.021639 Acc: 80.68%
+Train Epoch: 21 [112000/116172] Loss: 0.010441 CE_loss: 0.008062 cosine_loss: 0.018038 Acc: 94.10%
+epoch accuracy:97.5760079881555%
+Validation set - Epoch: 21, Accuracy: 6838/7262 (94.16%)
+Model saved at epoch_21
+Training Epochs:  84%|████████████████████████████████████████████████████▉          | 21/25 [2:03:31<23:45, 356.43s/it]Train Epoch: 22 [0/116172] Loss: 0.025116 CE_loss: 0.022537 cosine_loss: 0.020076 Acc: 0.03%
+Train Epoch: 22 [16000/116172] Loss: 0.094150 CE_loss: 0.091834 cosine_loss: 0.017488 Acc: 13.50%
+Train Epoch: 22 [32000/116172] Loss: 0.009500 CE_loss: 0.006780 cosine_loss: 0.021396 Acc: 27.00%
+Train Epoch: 22 [48000/116172] Loss: 0.036897 CE_loss: 0.034552 cosine_loss: 0.017709 Acc: 40.46%
+Train Epoch: 22 [64000/116172] Loss: 0.026688 CE_loss: 0.024235 cosine_loss: 0.018788 Acc: 53.92%
+Train Epoch: 22 [80000/116172] Loss: 0.187054 CE_loss: 0.184793 cosine_loss: 0.016905 Acc: 67.41%
+Train Epoch: 22 [96000/116172] Loss: 0.026426 CE_loss: 0.024157 cosine_loss: 0.017020 Acc: 80.86%
+Train Epoch: 22 [112000/116172] Loss: 0.027240 CE_loss: 0.024929 cosine_loss: 0.017441 Acc: 94.33%
+epoch accuracy:97.80928278759082%
+Validation set - Epoch: 22, Accuracy: 6798/7262 (93.61%)
+Epoch 22 completed
+Training Epochs:  88%|███████████████████████████████████████████████████████▍       | 22/25 [2:09:27<17:48, 356.09s/it]Train Epoch: 23 [0/116172] Loss: 0.087955 CE_loss: 0.085373 cosine_loss: 0.019524 Acc: 0.03%
+Train Epoch: 23 [16000/116172] Loss: 0.033551 CE_loss: 0.030851 cosine_loss: 0.021163 Acc: 13.51%
+Train Epoch: 23 [32000/116172] Loss: 0.012438 CE_loss: 0.009932 cosine_loss: 0.018963 Acc: 26.99%
+Train Epoch: 23 [48000/116172] Loss: 0.009436 CE_loss: 0.006955 cosine_loss: 0.019278 Acc: 40.48%
+Train Epoch: 23 [64000/116172] Loss: 0.014388 CE_loss: 0.012007 cosine_loss: 0.017881 Acc: 53.99%
+Train Epoch: 23 [80000/116172] Loss: 0.039514 CE_loss: 0.036805 cosine_loss: 0.021267 Acc: 67.51%
+Train Epoch: 23 [96000/116172] Loss: 0.063652 CE_loss: 0.061219 cosine_loss: 0.018832 Acc: 81.02%
+Train Epoch: 23 [112000/116172] Loss: 0.094782 CE_loss: 0.092487 cosine_loss: 0.017127 Acc: 94.53%
+epoch accuracy:98.03825362393692%
+Validation set - Epoch: 23, Accuracy: 6818/7262 (93.89%)
+Epoch 23 completed
+Training Epochs:  92%|█████████████████████████████████████████████████████████▉     | 23/25 [2:15:20<11:50, 355.26s/it]Train Epoch: 24 [0/116172] Loss: 0.007378 CE_loss: 0.005124 cosine_loss: 0.016753 Acc: 0.03%
+Train Epoch: 24 [16000/116172] Loss: 0.008374 CE_loss: 0.005861 cosine_loss: 0.019262 Acc: 13.55%
+Train Epoch: 24 [32000/116172] Loss: 0.029318 CE_loss: 0.026571 cosine_loss: 0.021892 Acc: 27.04%
+Train Epoch: 24 [48000/116172] Loss: 0.092233 CE_loss: 0.089885 cosine_loss: 0.017750 Acc: 40.58%
+Train Epoch: 24 [64000/116172] Loss: 0.056859 CE_loss: 0.054150 cosine_loss: 0.020830 Acc: 54.10%
+Train Epoch: 24 [80000/116172] Loss: 0.025549 CE_loss: 0.023253 cosine_loss: 0.017193 Acc: 67.59%
+Train Epoch: 24 [96000/116172] Loss: 0.049497 CE_loss: 0.046487 cosine_loss: 0.024418 Acc: 81.09%
+Train Epoch: 24 [112000/116172] Loss: 0.008425 CE_loss: 0.006035 cosine_loss: 0.018074 Acc: 94.61%
+epoch accuracy:98.10969941121785%
+Validation set - Epoch: 24, Accuracy: 6844/7262 (94.24%)
+Model saved at epoch_24
+Training Epochs:  96%|████████████████████████████████████████████████████████████▍  | 24/25 [2:21:10<05:53, 353.84s/it]Train Epoch: 25 [0/116172] Loss: 0.012215 CE_loss: 0.009686 cosine_loss: 0.019486 Acc: 0.03%
+Train Epoch: 25 [16000/116172] Loss: 0.023049 CE_loss: 0.020371 cosine_loss: 0.021132 Acc: 13.54%
+Train Epoch: 25 [32000/116172] Loss: 0.173304 CE_loss: 0.170549 cosine_loss: 0.021748 Acc: 27.08%
+Train Epoch: 25 [48000/116172] Loss: 0.056765 CE_loss: 0.054160 cosine_loss: 0.020171 Acc: 40.64%
+Train Epoch: 25 [64000/116172] Loss: 0.021440 CE_loss: 0.018709 cosine_loss: 0.021296 Acc: 54.16%
+Train Epoch: 25 [80000/116172] Loss: 0.027471 CE_loss: 0.024907 cosine_loss: 0.019682 Acc: 67.71%
+Train Epoch: 25 [96000/116172] Loss: 0.020832 CE_loss: 0.018562 cosine_loss: 0.016876 Acc: 81.22%
+Train Epoch: 25 [112000/116172] Loss: 0.019415 CE_loss: 0.017137 cosine_loss: 0.016707 Acc: 94.75%
+epoch accuracy:98.27238921599009%
+Validation set - Epoch: 25, Accuracy: 6855/7262 (94.40%)
+Model saved at epoch_25
+Training Epochs: 100%|███████████████████████████████████████████████████████████████| 25/25 [2:27:02<00:00, 352.88s/it]

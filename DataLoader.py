@@ -35,6 +35,7 @@ def get_loaders(root=r"data", batch_size=32):
     
     train_dir = f"{root}\\train"
     valid_dir = f"{root}\\valid"
+    test_dir = f"{root}\\test"
     
     transform = transforms.Compose([
         transforms.ToTensor(),               # (1,128,128)
@@ -42,9 +43,12 @@ def get_loaders(root=r"data", batch_size=32):
     ])
 
     train_dataset = HandwritingDataset(train_dir, transform=transform)
-    valid_dataset = HandwritingDataset(train_dir, transform=transform)
+    valid_dataset = HandwritingDataset(valid_dir, transform=transform)
+    test_dataset = HandwritingDataset(test_dir, transform=transform)
+    
     
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     valid_loader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
     
-    return train_loader, valid_loader
+    return train_loader, valid_loader, test_loader

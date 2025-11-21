@@ -24,7 +24,7 @@ def final_test(model, device, test_loader, epoch): #test the model with hide-and
     total = 0
 
     with torch.no_grad():  # 不计算梯度
-        save_visual = True
+        save_visual = False
         for batch_idx, (data, target) in enumerate(test_loader):
             data, target = data.to(device), target.to(device)
 
@@ -58,8 +58,8 @@ def final_test(model, device, test_loader, epoch): #test the model with hide-and
 def main():
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = FullModel(k=4).to(device)
-    checkpoint = torch.load('checkpoints\\best__version.pth', map_location=device)
+    model = FullModel(k=16).to(device)
+    checkpoint = torch.load('checkpoints_k30\\best_version_01.pth', map_location=device)
     # 提取模型真正的参数部分
     state_dict = checkpoint['state_dict']
 
@@ -73,7 +73,7 @@ def main():
     # 加载到模型
     model.load_state_dict(new_state_dict, strict=False)
     
-    train_loader, test_loader = get_loaders()
+    train_loader, valid_loader, test_loader = get_loaders()
     
     test_acc_hide_seek = final_test(
         model=model,

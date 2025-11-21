@@ -4,10 +4,26 @@ import numpy as np
 from tqdm import tqdm
 import os
 import torch.nn.functional as F
+import random
 
 from model import FullModel
 from dataloader import get_loaders
 from utils import save_checkpoint
+
+def set_seed(seed=42):
+    random.seed(seed)                         # Python 随机
+    np.random.seed(seed)                      # Numpy 随机
+    torch.manual_seed(seed)                   # PyTorch CPU 随机
+    torch.cuda.manual_seed(seed)              # PyTorch GPU 随机
+    torch.cuda.manual_seed_all(seed)          # 多GPU
+
+    # cuDNN 固定模式
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+    # 环境变量（影响 dataloader 多进程）
+    os.environ['PYTHONHASHSEED'] = str(seed)
+
 
 def train(model, device, train_loader, optimizer, epoch, lamda):
     model.train()
@@ -24,13 +40,12 @@ def train(model, device, train_loader, optimizer, epoch, lamda):
         # cosine_loss = 1 - F.cosine_similarity(z, z_hat).mean()
         # cosine_loss = 1 - F.cosine_similarity(z, z_hat, dim=1).mean()
         cosine_loss = torch.clamp(1 - F.cosine_similarity(z, z_hat, dim=1).mean(), 0, 1)
-
+        cosine_loss_base = torch.clamp(1 - F.cosine_similarity(z, z, dim=1).mean(), 0, 1)
+        
         selector_reg = 1e-3 * weights.pow(2).mean()
 
         loss = CE_loss + lamda * cosine_loss + selector_reg
-        
-        
-        
+              
         # loss = CE_loss + lamda * cosine_loss
         loss.backward()
         optimizer.step()
@@ -40,7 +55,8 @@ def train(model, device, train_loader, optimizer, epoch, lamda):
         correct += predicted.eq(target).sum().item()
 
         train_acc = 100. * correct / len(train_loader.dataset)
-        print(f'Train Epoch: {epoch} [{i * len(data)}/{len(train_loader.dataset)}] Loss: {loss.item():.6f} CE_loss: {CE_loss.item():.6f} cosine_loss: {cosine_loss.item():.6f} Acc: {train_acc:.2f}%')
+        if i % 500 == 0:
+            print(f'Train Epoch: {epoch} [{i * len(data)}/{len(train_loader.dataset)}] Loss: {loss.item():.6f} CE_loss: {CE_loss.item():.6f} cosine_loss: {cosine_loss.item():.6f} cosine_loss_base: {cosine_loss_base.item():.6f} Acc: {train_acc:.2f}%')
 
     train_acc = 100. * correct / len(train_loader.dataset)
     print(f"epoch accuracy:{train_acc}%")
@@ -73,13 +89,14 @@ def validate(model, device, val_loader, epoch):
 
 
 
-def main(epochs = 70, lr = 3e-4, lamda = 0.0001, selected_k = 20):
+def main(epochs = 25, lr = 3e-4, lamda = 0.1, selected_k = 30):
+    set_seed(42)
 
     best_acc = 0
     print(f"training {epochs} epochs with lr {lr},lamda {lamda},selected_k {selected_k}")
     
     # 数据加载与划分
-    train_loader, valid_loader = get_loaders()
+    train_loader, valid_loader, test_loader = get_loaders()
     
     # 初始化模型和优化器
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
